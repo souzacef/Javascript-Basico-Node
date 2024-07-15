@@ -6,10 +6,10 @@ class Carro extends Veiculo{
         this.numPortas = numPortas;
     }    
 
-    acelerar() {
-        console.log("+5km/h");
-    }
-    
+    // acelerar() {
+    //     console.log("+5km/h");
+    // }
+
 }
 
 module.exports = Carro;

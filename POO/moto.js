@@ -6,9 +6,9 @@ class Moto extends Veiculo{
         this.cilindrada = cilindrada;        
     }
 
-    acelerar() {
-        console.log("+10km/h");
-    }
+    // acelerar() {
+    //     console.log("+10km/h");
+    // }
 
     apresentacao() {
         console.log(`Marca: ${this.marca}, Modelo: ${this.modelo}, Ano: ${this.ano}, Cilindradas: ${this.cilindrada}`);
