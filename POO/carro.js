@@ -1,4 +1,4 @@
-const Veiculo = require("./veiculo");
+const Veiculo = require("./Veiculo");
 
 class Carro extends Veiculo{
     constructor(marca, modelo, ano, tipo, combustivel, numOcupantes, numPortas){    
