@@ -1,6 +1,6 @@
-const Personagem = require("../personagem");
+const Personagem = require("./Personagem");
 
-class Vilao1 extends Personagem{
+class Vilao extends Personagem{
 
     constructor(vida, forcaAtaqueEsp){
         super(vida);
@@ -20,4 +20,4 @@ class Vilao1 extends Personagem{
     }
 }
 
-module.exports = Vilao1;
+module.exports = Vilao;

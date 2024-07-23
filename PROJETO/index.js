@@ -76,7 +76,8 @@ if (prompt("Deseja subir na árvore para pegar a sacola? S - sim ou N - não. ")
 
 // FIM DA FASE INTRODUTÓRIA
 console.log();
-const f1 = fase1(heroi);
+fase3(heroi);
+ const f1 = fase1(heroi);
 
 if (f1) {
    const f2 = fase2(heroi);

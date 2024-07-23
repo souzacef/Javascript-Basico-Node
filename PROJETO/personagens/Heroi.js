@@ -1,4 +1,4 @@
-const Personagem = require("../personagem");
+const Personagem = require("./Personagem");
 
 
 class Heroi extends Personagem{

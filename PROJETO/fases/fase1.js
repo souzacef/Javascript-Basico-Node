@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")();
 
-const Vilao = require("../personagens/Vilao1");
+const Vilao = require("../personagens/Vilao");
 
 function lutar(heroi) {
     console.log("Preparados ou não, lá vem porrada. ");

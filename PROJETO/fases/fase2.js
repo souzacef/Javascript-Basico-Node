@@ -41,10 +41,11 @@ module.exports = (heroi) => {
     console.log(`Seria melhor ir pela direita ou esquerda, pensou ${heroi.nome}. `);
 
     if (prompt("Ir pela direita ou esquerda? D - Direita ou E - Esquerda ").toUpperCase() == "D") {
-        console.log(`Pouco depois, seguindo a trilha pela direita, ${heroi.nome} encontrou um portal brilhante e entrou... `);
+        console.log(`Pouco depois, seguindo a trilha pela direita, ${heroi.nome} encontrou um portal brilhante e entrou...\n`);
         return true;
     } else {
         console.log(`${heroi.nome} seguiu a trilha pela esquerda e continuou por mais algumas horas. `);
+        console.log();
         return false;
     }
 }
