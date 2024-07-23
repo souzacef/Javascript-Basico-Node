@@ -41,7 +41,7 @@ module.exports = (heroi) => {
     if (luta) {
         heroi.restaurar();
         heroi.depositar(50);
-        log(`Parabéns, ${heroi.nome}! Você conseguiu vencer o Troll da Floresta. Receba seus premios. `)
+        console.log(`Parabéns, ${heroi.nome}! Você conseguiu vencer o Troll da Floresta. Receba seus premios. `);
         heroi.status();
         return true;
     } else {        

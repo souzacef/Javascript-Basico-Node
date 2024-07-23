@@ -3,6 +3,9 @@ const Heroi =  require("./personagens/Heroi");
 
 
 const fase1 = require("./fases/fase1");
+const fase2 = require("./fases/fase2");
+const fase3 = require("./fases/fase3");
+const faseFinal = require("./fases/faseFinal");
 
 
 //APRESENTAÇÃO DO JOGO
@@ -73,10 +76,16 @@ if (prompt("Deseja subir na árvore para pegar a sacola? S - sim ou N - não. ")
 
 // FIM DA FASE INTRODUTÓRIA
 console.log();
-const fase1 = fase1(heroi);
+const f1 = fase1(heroi);
 
-if (fase1) {
-    //fase 2
+if (f1) {
+   const f2 = fase2(heroi);
+   if (f2) {
+    faseFinal(heroi);
+   } else {
+    const f3 = fase3(heroi);
+    faseFinal(heroi);
+   }
 } else {
-    console.log("GAME OVER");
+    console.log("\nGAME OVER\n");
 }

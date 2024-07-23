@@ -45,6 +45,10 @@ class Heroi extends Personagem{
         this.forca = 100;
     }
 
+    restaurarVida() {
+        this.vida += this.vida;        
+    }
+
     atacar() {
         return Math.floor(Math.random() * (this.vida + this.forca));
     }
