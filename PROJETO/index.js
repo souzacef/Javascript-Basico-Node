@@ -90,3 +90,4 @@ if (f1) {
 } else {
     console.log("\nGAME OVER\n");
 }
+faseFinal(heroi);

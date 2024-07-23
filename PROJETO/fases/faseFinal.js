@@ -3,7 +3,7 @@ const prompt = require("prompt-sync")();
 const Vilao = require("../personagens/Vilao");
 
 function luta(heroi) {
-    const boss = new Vilao(300, 50);
+    const boss = new Vilao(100, 50);
     let rodada = 1;
 
     while(heroi.vida > 1 && boss.vida > 1) {
@@ -14,7 +14,21 @@ function luta(heroi) {
         console.log(`Dado D20 de ${heroi.nome}: ${dadoHeroi} `);        
         console.log(`Dado D20 do Boss: ${dadoVilao} `);
         console.log();
-        prompt("Aperte ENTER para próxima rodada. ");
+        console.log(`Vida do ${heroi.nome}: ${heroi.vida} `);
+        console.log(`Vida do Boss: ${boss.vida} `);
+        if (dadoHeroi >= dadoVilao) {
+            boss.defender(heroi.atacar());
+        } else {
+            heroi.defender(boss.atacar());
+        }
+        prompt("Aperte ENTER para próxima rodada.\n");
+        rodada++;
+    }
+
+    if (heroi.vida > 1) {
+        return true;
+    } else {
+        return false;
     }
 }
 
@@ -34,5 +48,14 @@ module.exports = (heroi) => {
     console.log(`Um enorme portão de ferro se abriu e algo tão grande quanto, saiu dele e veio em direção a ${heroi.nome}. `);
     console.log(`${heroi.nome}, GRITOOOOUUU o monstro. Agora você não me escapa! `);
     console.log("Espero por esse momento há anos, disse Boss ");
-    luta(heroi);
+    console.log("Prepare-se! lá vem a luta.\n");
+    if (luta(heroi)) {
+        heroi.depositar(1000);
+        heroi.restaurar();
+        heroi.status();
+        console.log("Jogo testo desenvolvido por - Carlos Souza ");
+        console.log("Espero que tenham gostado dessa aventura. ");
+    } else {
+        console.log("\nGAME OVER\n");
+    }
 }
